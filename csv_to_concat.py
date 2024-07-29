@@ -45,6 +45,8 @@ def add_n(df, f_arr, rep):
             for line in value:
                 if not '>' in line:
                     no_record_title.append(line)
+                else:
+                    print(f"fasta header in row {row} col {col}: {line}")
             fasta_seq=''.join(no_record_title)
             df.iloc[row, col]=fasta_seq
             col_seq.append(fasta_seq)
