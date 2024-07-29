@@ -54,6 +54,7 @@ def add_n(df, f_arr, rep):
             value=df.iloc[row,col]
             if is_empty_or_whitespace(value) or value=='nan':
                 print(f"Row {row}, Column {col} replaced with {rep}")
+                print(f"parsed as {value}")
                 df.iloc[row, col]=rep*longest_length
             else:
                 print(f"found sequence in Row {row}, Column {col}")
